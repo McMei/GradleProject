@@ -25,7 +25,7 @@ I will post a gif once I finished.
 Michelle Quan(Han Mei Quan)
 
 ## License
-
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 https://github.com/profvanselow
