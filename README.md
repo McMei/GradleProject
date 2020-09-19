@@ -9,7 +9,7 @@ I will post a gif once I finished.
 [JavaDoc](https://github.com/McMei/GradleProject/blob/master/index.html)
 
 ## Diagrams
-![All text](C:\Users\y1131\OneDrive\Pictures\Screenshots/Top-Level Package.png)
+![image 1](https://github.com/McMei/GradleProject/blob/master/Top-Level%20Package.png)
 
 ## Getting Started
 
