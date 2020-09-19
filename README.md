@@ -28,7 +28,7 @@ Michelle Quan(Han Mei Quan)
 
 
 ## Acknowledgments
-(https://github.com/profvanselow)
+https://github.com/profvanselow
 
 ## History
 
