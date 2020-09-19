@@ -22,13 +22,13 @@ I will post a gif once I finished.
 
 
 ## Author
-
+Michelle Quan(Han Mei Quan)
 
 ## License
 
 
 ## Acknowledgments
-
+[](https://github.com/profvanselow)
 
 ## History
 
