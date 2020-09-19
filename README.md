@@ -6,7 +6,7 @@ This is the first time I work on the database and user interface. Hopefully it c
 ## Demonstration
 I will post a gif once I finished.
 ## Documentation
-[JavaDoc](https://github.com/McMei/GradleProject/blob/master/index.html)
+[JavaDoc](http://htmlpreview.github.io/?https://github.com/McMei/GradleProject/blob/master/index.html)
 
 ## Diagrams
 
