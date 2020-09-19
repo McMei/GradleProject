@@ -12,7 +12,7 @@ I will post a gif once I finished.
 ![image 1](https://github.com/McMei/GradleProject/blob/master/Top-Level%20Package.png)
 
 ## Getting Started
-*Download the latest version of Intellij from [here](https://www.jetbrains.com/idea/download/#section=windows)
+* Download the latest version of Intellij from [here](https://www.jetbrains.com/idea/download/#section=windows)
 
 ## Built With
 
