@@ -15,8 +15,9 @@ I will post a gif once I finished.
 * Download the latest version of Intellij from [here](https://www.jetbrains.com/idea/download/#section=windows)
 
 ## Built With
-
-
+* Intellij IDEA
+* Scene Builder
+* H2 database
 ## Contributing
 
 
