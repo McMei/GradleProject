@@ -4,10 +4,9 @@ I started this project on Aug 26, 2020, for an assignment and improve my program
 I'm a junior in the college, also a newbie in programming. Be nice to me please(whispering).
 This is the first time I work on the database and user interface. Hopefully it can comes out smoothly by the end of the semester.
 ## Demonstration
-
-
+I will post a gif once I finished.
 ## Documentation
-
+[JavaDoc]https://github.com/McMei/GradleProject/blob/master/index.html
 
 ## Diagrams
 
