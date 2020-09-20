@@ -11,10 +11,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+/**
+ * This class implements a simple Database Controller.
+ *
+ * @author Michelle Quan
+ */
 public class DatabaseController {
-
-    @FXML
-    private Label lblOutput;
 
     @FXML
     private Button eventHandler;
@@ -34,12 +36,23 @@ public class DatabaseController {
     @FXML
     private TextField txtManufacturer;
 
+    /**
+     * Connect and run the database every time
+     * this event happens.
+     *
+     * @param event User click the
+     *              'Add Product' bottom.
+     */
     @FXML
     void addProduct(ActionEvent event) {
         connectToDb();
 
     }
 
+    /**
+     * Populate with value 1-10 in the ComboBox,
+     * and allow users to enter values in the ComboBox.
+     */
     public void initialize() {
         //Add 'AUDIO' to the ChoiceBox.
         cbType.getItems().add("AUDIO");
@@ -53,7 +66,10 @@ public class DatabaseController {
 
     }
 
-
+    /**
+     * Connect to the Database, allow users to add products
+     * and print out full list of products to the console.
+     */
     public void connectToDb() {
         final String JDBC_DRIVER = "org.h2.Driver";
         final String DB_URL = "jdbc:h2:./res/database";
