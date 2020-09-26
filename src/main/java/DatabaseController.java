@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+
 /**
  * This class implements a simple Database Controller.
  *
@@ -54,17 +55,22 @@ public class DatabaseController {
      * and allow users to enter values in the ComboBox.
      */
     public void initialize() {
-        //Add 'AUDIO' to the ChoiceBox.
-        cbType.getItems().add("AUDIO");
+        //Add Item type to the ChoiceBox.
+        for (ItemType it : ItemType.values()) {
+            cbType.getItems().add(it.getCode());
+        }
 
-        cmbQuantity.getSelectionModel().selectFirst();
         cmbQuantity.setEditable(true);
 
         for (int i = 1; i <= 10; i++) {
             cmbQuantity.getItems().add(String.valueOf(i));
+            if(i == 1){
+                cmbQuantity.getSelectionModel().selectFirst();
+            }
         }
 
     }
+
 
     /**
      * Connect to the Database, allow users to add products
@@ -117,6 +123,9 @@ public class DatabaseController {
                         + rs.getString(2) + " " + rs.getString(3)
                         + " " + rs.getString(4));
             }
+
+//            Widget widget = new Widget(123, "AM", "Apple", "iPod");
+//            System.out.println(widget.toString());
 
             // STEP 4: Clean-up environment
             stmt.close();
