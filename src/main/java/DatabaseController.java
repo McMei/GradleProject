@@ -124,8 +124,6 @@ public class DatabaseController {
                         + " " + rs.getString(4));
             }
 
-//            Widget widget = new Widget(123, "AM", "Apple", "iPod");
-//            System.out.println(widget.toString());
 
             // STEP 4: Clean-up environment
             stmt.close();
