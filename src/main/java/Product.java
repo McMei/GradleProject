@@ -31,9 +31,13 @@ public abstract class Product implements Item{
         return manufacturer;
     }
 
+    public ItemType getType(){
+        return type;
+    }
+
     public String toString(){
         return "Name: " + getName() + "\nManufacturer: " + getManufacturer()
-                + "\nType: " + type.getCode();
+                + "\nType: " + getType();
     }
 }
 

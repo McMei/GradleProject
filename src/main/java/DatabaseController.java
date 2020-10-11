@@ -1,5 +1,7 @@
 import java.net.URL;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -36,6 +39,9 @@ public class DatabaseController {
 
     @FXML
     private TextField txtManufacturer;
+
+    @FXML
+    private TextArea txtProductionRecord;
 
     /**
      * Connect and run the database every time
@@ -68,9 +74,29 @@ public class DatabaseController {
                 cmbQuantity.getSelectionModel().selectFirst();
             }
         }
-
+        ProductionRecord productionRecord =
+                new ProductionRecord(0,0,"0", new Date());
+        txtProductionRecord.appendText(productionRecord.toString());
+        testMultimedia();
     }
 
+    public static void testMultimedia() {
+        AudioPlayer newAudioProduct = new AudioPlayer("DP-X1A", "Onkyo",
+                "DSD/FLAC/ALAC/WAV/AIFF/MQA/Ogg-Vorbis/MP3/AAC", "M3U/PLS/WPL");
+        Screen newScreen = new Screen("720x480", 40, 22);
+        MoviePlayer newMovieProduct = new MoviePlayer("DBPOWER MK101", "OracleProduction", newScreen,
+                MonitorType.LCD);
+        ArrayList<MultimediaControl> productList = new ArrayList<MultimediaControl>();
+        productList.add(newAudioProduct);
+        productList.add(newMovieProduct);
+        for (MultimediaControl p : productList) {
+            System.out.println(p);
+            p.play();
+            p.stop();
+            p.next();
+            p.previous();
+        }
+    }
 
     /**
      * Connect to the Database, allow users to add products
@@ -112,6 +138,8 @@ public class DatabaseController {
             preparedStatement.setString(3, pro_name);
 
             preparedStatement.executeUpdate();
+
+
 
             String print_product = "SELECT * FROM PRODUCT";
 
