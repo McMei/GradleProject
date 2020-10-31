@@ -1,18 +1,20 @@
-import java.net.URL;
+//import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.ResourceBundle;
+//import java.util.ResourceBundle;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+
 
 
 /**
@@ -23,16 +25,28 @@ import javafx.scene.control.*;
 public class DatabaseController {
 
     @FXML
-    private Button eventHandler;
+    private TableView<Product> tableView;
 
     @FXML
-    private Button RecordProduction;
+    private ListView<Product> listView;
+
+    @FXML
+    private TableColumn<?, ?> idCol;
+
+    @FXML
+    private TableColumn<?, ?> nameCol;
+
+    @FXML
+    private TableColumn<?, ?> typeCol;
+
+    @FXML
+    private TableColumn<?, ?> manufacturerCol;
 
     @FXML
     private ComboBox<String> cmbQuantity;
 
     @FXML
-    private ChoiceBox<String> cbType;
+    private ChoiceBox<ItemType> cbType;
 
     @FXML
     private TextField txtpro_name;
@@ -43,6 +57,9 @@ public class DatabaseController {
     @FXML
     private TextArea txtProductionRecord;
 
+    private ObservableList<Product> productLine = FXCollections.observableArrayList();
+    private ArrayList<ProductionRecord> productionRecord = new ArrayList<>();
+
     /**
      * Connect and run the database every time
      * this event happens.
@@ -52,8 +69,24 @@ public class DatabaseController {
      */
     @FXML
     void addProduct(ActionEvent event) {
-        connectToDb();
+        //connectToDb();
+        productLine.add(new Product(txtpro_name.getText(),
+                txtManufacturer.getText(), cbType.getValue()));
+    }
 
+    @FXML
+    void RecordProduction(ActionEvent event) {
+
+        int num = 0;
+        while(num < Integer.valueOf(cmbQuantity.getValue())){
+            productionRecord.add(new ProductionRecord(0,0,"0", new Date()));
+            num++;
+        }
+
+        for(int i = 0; i < productionRecord.size(); i++){
+            txtProductionRecord.appendText(productionRecord.get(i).toString() + "\n");
+        }
+        productionRecord.clear();
     }
 
     /**
@@ -63,7 +96,7 @@ public class DatabaseController {
     public void initialize() {
         //Add Item type to the ChoiceBox.
         for (ItemType it : ItemType.values()) {
-            cbType.getItems().add(it.getCode());
+            cbType.getItems().add(it);
         }
 
         cmbQuantity.setEditable(true);
@@ -74,11 +107,22 @@ public class DatabaseController {
                 cmbQuantity.getSelectionModel().selectFirst();
             }
         }
-        ProductionRecord productionRecord =
-                new ProductionRecord(0,0,"0", new Date());
-        txtProductionRecord.appendText(productionRecord.toString());
-        testMultimedia();
+
+        setupProductionLineTable();
+        tableView.setItems(productLine);
+        listView.setItems(productLine);
+
+        //testMultimedia();
     }
+
+
+    public void setupProductionLineTable(){
+        //idCol.setCellValueFactory(new PropertyValueFactory("id"));
+        nameCol.setCellValueFactory(new PropertyValueFactory("name"));
+        typeCol.setCellValueFactory(new PropertyValueFactory("type"));
+        manufacturerCol.setCellValueFactory(new PropertyValueFactory("manufacturer"));
+    }
+
 
     public static void testMultimedia() {
         AudioPlayer newAudioProduct = new AudioPlayer("DP-X1A", "Onkyo",
@@ -125,7 +169,7 @@ public class DatabaseController {
             //Get the values from the user interface
             String pro_name = txtpro_name.getText();
             String manufact = txtManufacturer.getText();
-            String type = cbType.getValue();
+            ItemType type = cbType.getValue();
 
 
             String sql = "INSERT INTO PRODUCT SET TYPE = ?, MANUFACTURER = ?, NAME = ?";
@@ -133,7 +177,7 @@ public class DatabaseController {
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
 
             //Add product to the database
-            preparedStatement.setString(1, type);
+            preparedStatement.setString(1, type.getCode());
             preparedStatement.setString(2, manufact);
             preparedStatement.setString(3, pro_name);
 

@@ -1,4 +1,4 @@
-public abstract class Product implements Item{
+public class Product implements Item{
 
     private int id = 0;
     private ItemType type;
@@ -10,6 +10,7 @@ public abstract class Product implements Item{
         this.manufacturer = manufacturer;
         this.type = type;
     }
+
 
     public int getID(){
         return id;
