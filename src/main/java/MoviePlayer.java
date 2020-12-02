@@ -1,7 +1,7 @@
 public class MoviePlayer extends Product implements MultimediaControl {
 
-    private Screen screen;
-    private MonitorType monitorType;
+    private final Screen screen;
+    private final MonitorType monitorType;
 
     MoviePlayer(String name, String manufacturer, Screen screen, MonitorType monitorType) {
         super(name, manufacturer, ItemType.VISUAL);
@@ -25,7 +25,7 @@ public class MoviePlayer extends Product implements MultimediaControl {
         System.out.println("Next");
     }
 
-    public String toString(){
+    public String toString() {
         return super.toString() + screen.toString() + "\nMonitor Type: " + monitorType;
     }
 }

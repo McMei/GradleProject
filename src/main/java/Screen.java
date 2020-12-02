@@ -1,13 +1,13 @@
 public class Screen implements ScreenSpec {
 
-    private String resolution;
-    private int refreshrate = 0;
-    private int responsetime = 0;
+    private final String resolution;
+    private final int refreshRate;
+    private final int responseTime;
 
-    Screen(String resolution, int refreshrate, int responsetime) {
+    Screen(String resolution, int refreshRate, int responseTime) {
         this.resolution = resolution;
-        this.refreshrate = refreshrate;
-        this.responsetime = responsetime;
+        this.refreshRate = refreshRate;
+        this.responseTime = responseTime;
     }
 
     public String getResolution() {
@@ -15,14 +15,14 @@ public class Screen implements ScreenSpec {
     }
 
     public int getRefreshRate() {
-        return refreshrate;
+        return refreshRate;
     }
 
     public int getResponseTime() {
-        return responsetime;
+        return responseTime;
     }
 
-    public String toString(){
+    public String toString() {
         return "\nScreen:" + "\nResolution: " + getResolution()
                 + "\nRefresh rate: " + getRefreshRate() + "\nResponse time: " + getResponseTime();
     }

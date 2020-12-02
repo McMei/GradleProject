@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="MonitorType LCD" />
+      <entry_point TYPE="field" FQNAME="MonitorType LED" />
+    </entry_points>
+    <pattern value="Product" method="setManufacturer" />
+    <pattern value="Product" method="setName" />
+    <pattern value="ProductionRecord" method="getProductID" />
+    <pattern value="ProductionRecord" method="setName" />
+    <pattern value="ScreenSpec" method="getRefreshRate" />
+    <pattern value="ScreenSpec" method="getResolution" />
+    <pattern value="ScreenSpec" method="getResponseTime" />
+    <pattern value="ProductionRecord" method="setProdDate" />
+    <pattern value="ProductionRecord" method="setProductID" />
+    <pattern value="ProductionRecord" method="setProductionNum" />
+    <pattern value="ProductionRecord" method="setSerialNum" />
+    <pattern value="MultimediaControl" method="next" />
+    <pattern value="MultimediaControl" method="play" />
+    <pattern value="MultimediaControl" method="previous" />
+    <pattern value="MultimediaControl" method="stop" />
+    <pattern value="Item" method="getID" />
+    <pattern value="Item" method="getManufacturer" />
+    <pattern value="Item" method="getName" />
+    <pattern value="Item" method="setManufacturer" />
+    <pattern value="Item" method="setName" />
+    <pattern value="Screen" method="Screen" />
+    <pattern value="MoviePlayer" method="MoviePlayer" />
+    <pattern value="MoviePlayer" method="next" />
+    <pattern value="MoviePlayer" method="play" />
+    <pattern value="MoviePlayer" method="previous" />
+    <pattern value="MoviePlayer" method="stop" />
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FindBugsConfigurable">
     <option name="make" value="true" />

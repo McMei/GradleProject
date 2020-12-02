@@ -2,29 +2,33 @@ import java.util.*;
 
 public class ProductionRecord {
     private int productionNumber = 0;
+    private String productName = "";
     private int productID = 0;
-    private String serialNumber = "";
-    private Date dateProduced = new Date();
-    private Product product;
-    private int count;
+    private String serialNumber;
+    private Date dateProduced;
 
-    ProductionRecord(int productID){
+    ProductionRecord(int productID) {
         this.productID = productID;
         productionNumber = 0;
         serialNumber = "0";
         dateProduced = new Date();
     }
 
-    ProductionRecord(int productionNumber, int productID, String serialNumber, Date dateProduced){
+    ProductionRecord(int productionNumber, String productName, String serialNumber, Date dateProduced) {
         this.productionNumber = productionNumber;
-        this.productID = productID;
+        this.productName = productName;
         this.serialNumber = serialNumber;
         this.dateProduced = dateProduced;
     }
 
-    ProductionRecord(Product product, int count){
-        this.product = product;
-        this.count = count;
+    ProductionRecord(String productName, String serialNumber, Date dateProduced) {
+        this.productName = productName;
+        this.serialNumber = serialNumber;
+        this.dateProduced = dateProduced;
+    }
+
+
+    ProductionRecord(Product product, int count) {
         serialNumber = product.getManufacturer().substring(0, 3) + product.getType().getCode() + String.format("%05d", count);
     }
 
@@ -44,6 +48,14 @@ public class ProductionRecord {
         this.productID = productID;
     }
 
+    public String getName() {
+        return productName;
+    }
+
+    public void setName(String productName) {
+        this.productName = productName;
+    }
+
     public String getSerialNum() {
         return serialNumber;
     }
@@ -61,8 +73,9 @@ public class ProductionRecord {
     }
 
     @Override
-    public String toString(){
-        return "Prod. Num: " + getProductionNum() + " Product ID: " + getProductID()
-                + " Serial Num: " + getSerialNum() + " Date: " + getProdDate();
+    public String toString() {
+        return "Prod. Num: " + getProductionNum() + "  Product Name: " + getName()
+                + "  Serial Num: " + getSerialNum() + "  Date: " + getProdDate();
     }
+
 }

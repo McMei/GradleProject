@@ -1,51 +1,52 @@
-public class Product implements Item{
+public class Product implements Item {
 
     private int id = 0;
-    private ItemType type;
-    private String manufacturer = "";
-    private String name = "";
+    private final ItemType type;
+    private String manufacturer;
+    private String name;
 
-    Product(String name, String manufacturer, ItemType type){
+    Product(int id, String name, String manufacturer, ItemType type) {
+        this.id = id;
+        this.name = name;
+        this.manufacturer = manufacturer;
+        this.type = type;
+    }
+
+    Product(String name, String manufacturer, ItemType type) {
         this.name = name;
         this.manufacturer = manufacturer;
         this.type = type;
     }
 
 
-    public int getID(){
+    public int getID() {
         return id;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public void setManufacturer(String manufacturer){
+    public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
 
-    public String getManufacturer(){
+    public String getManufacturer() {
         return manufacturer;
     }
 
-    public ItemType getType(){
+    public ItemType getType() {
         return type;
     }
 
-    public String toString(){
-        return "Name: " + getName() + "\nManufacturer: " + getManufacturer()
+    public String toString() {
+        return "ID: " + getID() + "\nName: " + getName() + "\nManufacturer: " + getManufacturer()
                 + "\nType: " + getType();
     }
 }
 
-class Widget extends Product{
 
-    Widget(String name, String manufacturer, ItemType type){
-        super(name, manufacturer, type);
-    }
-
-}
