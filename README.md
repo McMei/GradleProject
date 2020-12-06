@@ -27,8 +27,8 @@ Michelle Quan(Han Mei Quan)
 This project is licensed under the MIT License.
 
 ## Acknowledgments
-https://github.com/profvanselow
-@FGCU
+* https://github.com/profvanselow
+* @FGCU
 
 ## History
 **Sprint 1** - GUI, basic database
