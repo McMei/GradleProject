@@ -19,8 +19,6 @@ This is the first time I worked on the database and user interface, I had fun :)
 * Intellij IDEA
 * Scene Builder
 * H2 database
-## Contributing
-
 
 ## Author
 Michelle Quan(Han Mei Quan)
