@@ -35,7 +35,7 @@ https://github.com/profvanselow
 ## History
 **Sprint 1** - GUI, basic database
 
-*JavaFX program with database connectivity.
+-JavaFX program with database connectivity.
 
 **Sprint 2** - OOP
 
