@@ -6,7 +6,7 @@ This is the first time I worked on the database and user interface, I had fun :)
 ## Demonstration
 ![](https://github.com/McMei/GradleProject/blob/week11/oop.gif)
 ## Documentation
-[JavaDoc](https://github.com/McMei/GradleProject/blob/week11/javadoc/allclasses-index.html)
+[JavaDoc](https://github.com/McMei/GradleProject/blob/week11/index.html)
 
 ## Diagrams
 ![image 1](https://github.com/McMei/GradleProject/blob/week11/Top-Level%20Package.png)
