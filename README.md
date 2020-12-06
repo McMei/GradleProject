@@ -9,7 +9,8 @@ This is the first time I worked on the database and user interface, I had fun :)
 [JavaDoc](https://github.com/McMei/GradleProject/blob/master/doc/Main.html)
 
 ## Diagrams
-![image 1](https://github.com/McMei/GradleProject/blob/master/Top-Level%20Package.png)
+![image 1](https://github.com/McMei/GradleProject/blob/week11/Top-Level%20Package.png)
+![image 2](https://github.com/McMei/GradleProject/blob/week11/PRODUCT.png)
 
 ## Getting Started
 * Download the latest version of Intellij from [here](https://www.jetbrains.com/idea/download/#section=windows)
