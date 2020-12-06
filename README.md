@@ -35,21 +35,21 @@ https://github.com/profvanselow
 ## History
 **Sprint 1** - GUI, basic database
 
--JavaFX program with database connectivity.
+* JavaFX program with database connectivity.
 
 **Sprint 2** - OOP
 
-*Pass tests (in repl.it) and include associated functionality within JavaFX program.
+* Pass tests (in repl.it) and include associated functionality within JavaFX program.
 
-  *Use the one time link to join the repl.it classroom on the Canvas course home page.
+  * Use the one time link to join the repl.it classroom on the Canvas course home page.
 
-  *After enrolling, you can just login to repl.it to access.
+  * After enrolling, you can just login to repl.it to access.
 
 **Sprint 3** - Full database integration and enhancements
 
-*Pass tests (in repl.it) and include associated functionality within JavaFX program.
+* Pass tests (in repl.it) and include associated functionality within JavaFX program.
 
-*Satisfy all specifications on this page. 
+* Satisfy all specifications on this page. 
 
 ## Key Programming Concepts Utilized
 Object Orientated Programming.
