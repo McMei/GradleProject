@@ -1,12 +1,42 @@
-
+/**
+ * Represents an employee.
+ *
+ * @author Michelle Quan
+ */
 public class Employee {
 
+    /**
+     * Employee's full name.
+     */
     private final String name;
+
+    /**
+     * Employee's password.
+     */
     private String password;
+
+    /**
+     * Employee's  username.
+     */
     private String username = "";
+
+    /**
+     * Employee's email address.
+     */
+
     private String email = "";
+
+    /**
+     * Employee's reversed password.
+     */
     private final String reversePass;
 
+    /**
+     * Creates user information.
+     *
+     * @param name     The employee’s full name.
+     * @param password The employee’s password
+     */
     Employee(String name, String password) {
         this.name = name;
         this.password = password;
@@ -29,6 +59,11 @@ public class Employee {
         }
     }
 
+    /**
+     * Check if the name contain a space
+     *
+     * @return A Boolean To check if the name contain a space.
+     */
     public boolean checkName() {
         for (int i = 0; i < name.length(); i++) {
             if (Character.isSpaceChar(name.charAt(i))) {
@@ -38,6 +73,11 @@ public class Employee {
         return false;
     }
 
+    /**
+     * Sets the username field to the first name and then the last name, all lowercase.
+     *
+     * @param name employee's full name.
+     */
     public void setUsername(String name) {
         username = name.substring(0, 1);
         for (int i = 0; i < name.length(); i++) {
@@ -49,6 +89,11 @@ public class Employee {
         username = username.toLowerCase();
     }
 
+    /**
+     * Sets the email field to the first name, then a period, then the last name followed by @oracleacademy.Test
+     *
+     * @param name employee's full name.
+     */
     public void setEmail(String name) {
         for (int i = 0; i < name.length(); i++) {
             if (Character.isSpaceChar(name.charAt(i))) {
@@ -62,6 +107,11 @@ public class Employee {
         email += "@oracleacademy.Test";
     }
 
+    /**
+     * Check if the password is valid (containing a lowercase letter, uppercase letter, and a special character).
+     *
+     * @return A Boolean if the password is valid.
+     */
     public Boolean isValidPassword() {
         int lowercase = 0;
         int uppercase = 0;
@@ -80,6 +130,12 @@ public class Employee {
         return lowercase != 0 && uppercase != 0 && character != 0;
     }
 
+    /**
+     * Reverse the order of the text stored for the database password.
+     *
+     * @param pw User's password.
+     * @return A String representing the reversed password.
+     */
     public String reverseString(String pw) {
         if (pw.length() == 1) {
             return pw;
@@ -88,6 +144,12 @@ public class Employee {
         }
     }
 
+    /**
+     * Gets employee information.
+     *
+     * @return A String with employee information.
+     */
+    @Override
     public String toString() {
         return "Employee Details" + "\nName : " + name + "\nUsername : " + username
                 + "\nEmail : " + email + "\nInitial Password : " + password + "\nReversed Password: "

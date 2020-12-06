@@ -1,4 +1,4 @@
-public enum MonitorType {
-    LCD,
-    LED
-}
+//public enum MonitorType {
+//    LCD,
+//    LED
+//}
