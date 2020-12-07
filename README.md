@@ -16,7 +16,7 @@ In addition to the ability to record production, the software also needs the abi
 ## Demonstration
 ![](https://github.com/McMei/GradleProject/blob/week11/oop.gif)
 ## Documentation
-[JavaDoc](https://github.com/McMei/GradleProject/index.html)
+[JavaDoc](Main.html)
 
 ## Diagrams
 ![image 1](https://github.com/McMei/GradleProject/blob/week11/Top-Level%20Package.png)
