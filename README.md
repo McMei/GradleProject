@@ -35,7 +35,7 @@ Michelle Quan(Han Mei Quan)
 
 ## License
 This project is licensed under the MIT License.
-[](https://github.com/McMei/GradleProject/blob/week11/LICENSE)
+[MIT License](https://github.com/McMei/GradleProject/blob/week11/LICENSE)
 
 ## Acknowledgments
 * [Prof. Vanselow](https://github.com/profvanselow)
